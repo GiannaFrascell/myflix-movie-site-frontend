@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000/api/movie/fetch";
+const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 // Centralized API request function
 const makeApiRequest = async (params) => {
     try {
-        const response = await axios.get(BASE_URL, { params });
+        const response = await axios.get(BASE_URL+"/movie/fetch", { params });
         return response.data;
     } catch (error) {
         console.error("API Request Error:", error);
