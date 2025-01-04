@@ -64,7 +64,7 @@ export const fetchItemsByCategory = async (type, category) => {
     });
 };
 
-const url = `${API_BASE_URL}/movie/moviestatus`;
+const url = `${BASE_URL}/movie/moviestatus`;
 
 export const getMoviesByStatus = async (userId) => {
     try {
@@ -93,7 +93,7 @@ export const upsertMovieStatus = async (userId, movieId, status) => {
     }
 };
 
-const url2 = `${API_BASE_URL}/tv/tvstatus`;
+const url2 = `${BASE_URL}/tv/tvstatus`;
 
 export const getTvSeriesByStatus = async (userId) => {
     try {
