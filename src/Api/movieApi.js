@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000/api/movie/fetch";
+const BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000/api/movie/fetch";
 
 // Centralized API request function
 const makeApiRequest = async (params) => {
@@ -64,7 +64,7 @@ export const fetchItemsByCategory = async (type, category) => {
     });
 };
 
-const url = "http://localhost:5000/api/movie/moviestatus";
+const url = `${API_BASE_URL}/movie/moviestatus`;
 
 export const getMoviesByStatus = async (userId) => {
     try {
@@ -93,7 +93,7 @@ export const upsertMovieStatus = async (userId, movieId, status) => {
     }
 };
 
-const url2 = "http://localhost:5000/api/tv/tvstatus";
+const url2 = `${API_BASE_URL}/tv/tvstatus`;
 
 export const getTvSeriesByStatus = async (userId) => {
     try {
