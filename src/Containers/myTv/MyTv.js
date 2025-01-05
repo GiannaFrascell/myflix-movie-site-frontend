@@ -96,7 +96,7 @@ const MyTv = () => {
                                 key={movie.id}
                                 className="movie-list__movie"
                                 onClick={() =>
-                                    navigate(`/movieTrailer/${movie.id}`)
+                                    navigate(`/seriesTrailer/${movie.id}`)
                                 }
                             >
                                 <img
