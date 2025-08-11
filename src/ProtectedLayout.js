@@ -4,13 +4,13 @@ import { Navigate, Outlet } from "react-router-dom";
 import AuthContext from "./Context/AuthContext";
 
 const ProtectedLayout = () => {
-  const { authToken } = useContext(AuthContext);
 
-  if (!authToken) {
+  if (false) {
     return <Navigate to="/auth/login" replace />;
   }
 
   return <Outlet />;
 };
+
 
 export default ProtectedLayout;
